@@ -6,6 +6,7 @@ let loc=document.querySelector('#loc');
 let b=document.querySelector('#bio');
 let f=document.querySelector('#f');
 let f1=document.querySelector('#f1');
+let pr=document.querySelector('#pr');
 
 
 
@@ -21,6 +22,7 @@ search_button.addEventListener('click', function (e) {
                 b.innerHTML=data.bio;
                 f.innerHTML=data.followers
                 f1.innerHTML=data.following;
+                pr.innerHTML=data.public_repos;
                 
             })
 
