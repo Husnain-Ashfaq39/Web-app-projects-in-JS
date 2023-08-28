@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Password Generator</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Password Generator</h1>
+    <div class="password">
+        <input type="text" id="password-field" readonly>
+        <button id="copy-button">
+          <i class="fas fa-copy"></i>
+        </button>
+      </div>
+    <div class="options">
+      <div class="option">
+        <input type="checkbox" id="include-uppercase">
+        <label for="include-uppercase">Include Uppercase Letters</label>
+      </div>
+      <div class="option">
+        <input type="checkbox" id="include-lowercase">
+        <label for="include-lowercase">Include Lowercase Letters</label>
+      </div>
+      <div class="option">
+        <input type="checkbox" id="include-numbers">
+        <label for="include-numbers">Include Numbers</label>
+      </div>
+      <div class="option">
+        <input type="checkbox" id="include-symbols">
+        <label for="include-symbols">Include Symbols</label>
+      </div>
+    </div>
+    
+    <div class="char-limit">
+        <label for="char-limit">Password Length:</label>
+        <input type="range" id="char-limit" min="1" max="25" value="10">
+        <span id="char-limit-value">10</span>
+      </div>
+      
+      <div class="strength">
+        <span>Password Strength:</span>
+        <div class="strength-meter">
+            
+          <div class="strength-bar zero"></div>
+          <div class="strength-bar weak"></div>
+          <div class="strength-bar normal"></div>
+          <div class="strength-bar strong"></div>
+        </div>
+      </div>
+    <button id="generate-button">Generate Password</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
