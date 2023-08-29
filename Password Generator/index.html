@@ -11,14 +11,14 @@
   <div class="container">
     <h1>Password Generator</h1>
     <div class="password">
-        <input type="text" id="password-field" readonly>
+        <input type="text" id="password-field" >
         <button id="copy-button">
           <i class="fas fa-copy"></i>
         </button>
       </div>
     <div class="options">
       <div class="option">
-        <input type="checkbox" id="include-uppercase">
+        <input type="checkbox" id="include-uppercase" checked>
         <label for="include-uppercase">Include Uppercase Letters</label>
       </div>
       <div class="option">
@@ -37,7 +37,7 @@
     
     <div class="char-limit">
         <label for="char-limit">Password Length:</label>
-        <input type="range" id="char-limit" min="1" max="25" value="10">
+        <input type="range" id="char-limit" min="1" max="25" value="10" step="1">
         <span id="char-limit-value">10</span>
       </div>
       
@@ -45,7 +45,7 @@
         <span>Password Strength:</span>
         <div class="strength-meter">
             
-          <div class="strength-bar zero"></div>
+          <!-- <div class="strength-bar zero"></div> -->
           <div class="strength-bar weak"></div>
           <div class="strength-bar normal"></div>
           <div class="strength-bar strong"></div>

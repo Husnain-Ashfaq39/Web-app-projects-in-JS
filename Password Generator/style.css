@@ -26,6 +26,8 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
   }
   
   .option {
@@ -134,6 +136,7 @@ body {
   .weak {
     background-color: #ff4d4d; /* Red for weak */
     width: 33.33%;
+    
   }
   
   .normal {
