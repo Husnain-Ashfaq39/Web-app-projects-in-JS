@@ -1,10 +1,10 @@
 let lengthBar = document.getElementById("char-limit");
 let length_Status = document.getElementById('char-limit-value');
 
-let upperCase=document.getElementById('include-uppercase');
-let lowerCase=document.getElementById('include-lowercase');
-let number=document.getElementById('include-numbers');
-let symbol_box=document.getElementById('include-symbols');
+let upperCase = document.getElementById('include-uppercase');
+let lowerCase = document.getElementById('include-lowercase');
+let number = document.getElementById('include-numbers');
+let symbol_box = document.getElementById('include-symbols');
 
 let zero = document.getElementsByClassName('zero');
 let weak = document.getElementsByClassName('weak');
@@ -28,19 +28,24 @@ function HandleSlider() {
 
 let hasUpperCase = false;
 let hasLowerCase = false;
-let hasNumbers=false;
-let hasSymbols=false;
-if(upperCase.checked) hasUpperCase=true;
-if(lowerCase.checked) hasLowerCase=true;
-if(number.checked) hasNumbers=true;
-if(symbol_box.checked) hasSymbols=true;
+let hasNumbers = false;
+let hasSymbols = false;
+if (upperCase.checked) hasUpperCase = true;
+if (lowerCase.checked) hasLowerCase = true;
+if (number.checked) hasNumbers = true;
+if (symbol_box.checked) hasSymbols = true;
 
 // handleStrength();
 function handleStrength() {
-    if(hasUpperCase && hasLowerCase &&(hasNumbers||hasSymbols)&& password_length>=8){
-
+    if (hasUpperCase && hasLowerCase && (hasNumbers || hasSymbols) && password_length >= 8) {
+        strong.style.display = "flex";
     }
-    
+    else if (hasUpperCase && hasLowerCase && password_length >= 8) {
+        normal.style.display = "flex";
+    }
+    else if (hasUpperCase && hasLowerCase && password_length <= 8) {
+        weak.style.display = "flex";
+    }
 }
 
 function getRandomInteger(min, max) {
@@ -75,17 +80,50 @@ function generateSymbol() {
 
 
 function CopyContent() {
-    const password = passwordField.value;
 
-  // Use the Clipboard API to write text to the clipboard
-  navigator.clipboard.writeText(password)
-    .then(() => {
-      console.log('Text copied to clipboard:', password);
-    })
-    .catch(err => {
-      console.error('Error copying text:', err);
-    });
+    try {
+
+        navigator.clipboard.writeText(passwordField.value)
+        copy_button.innerHTML = 'Copied';
+        setTimeout(function () {
+            copy_button.innerHTML = `<i class="fas fa-copy active"></i>`;
+            console.log(copy_button.innerHTML);
+        }, 3000)
+    }
+    catch (e) {
+        copy_button.innerHTML = 'Failed to copy';
+        setTimeout(function () {
+            copy_button.innerHTML = `<i class="fas fa-copy active"></i>`;
+            console.log(copy_button.innerHTML);
+        }, 3000)
+    }
+    // const password = passwordField.value;
+
+    // // Use the Clipboard API to write text to the clipboard
+    // navigator.clipboard.writeText(password)
+    //     .then(() => {
+    //         console.log('Text copied to clipboard:', password);
+    //     })
+    //     .catch(err => {
+    //         console.error('Error copying text:', err);
+    //     });
 }
-copy_button.addEventListener('click', CopyContent())
+copy_button.addEventListener('click', function () {
+    try {
+
+        navigator.clipboard.writeText(passwordField.value)
+        copy_button.innerHTML = 'Copied';
+        setTimeout(function () {
+            copy_button.innerHTML = `<i class="fas fa-copy active"></i>`;
+            console.log(copy_button.innerHTML);
+        }, 3000)
+    }
+    catch (e) {
+        copy_button.innerHTML = 'Failed to copy';
+        setTimeout(function () {
+            copy_button.innerHTML = `<i class="fas fa-copy active"></i>`;
+            console.log(copy_button.innerHTML);
+        }, 3000)}
+});
 
 

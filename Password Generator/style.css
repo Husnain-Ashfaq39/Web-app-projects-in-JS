@@ -134,17 +134,20 @@ body {
   }
   
   .weak {
+    display: none;
     background-color: #ff4d4d; /* Red for weak */
     width: 33.33%;
     
   }
   
   .normal {
+    display: none;
     background-color: #ffcc00; /* Yellow for normal */
     width: 66.66%;
   }
   
   .strong {
+    display: none;
     background-color: #66cc66; /* Green for strong */
     width: 100%;
   }
