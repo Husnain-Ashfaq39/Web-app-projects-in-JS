@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Weather App</title>
+</head>
+
+<body class="bg-blue-950">
+    <!-- Main Container -->
+    <div class="flex flex-col justify-center items-center text-black py-7 ">
+        <!-- title -->
+        <h2 class="font-medium text-3xl">WEATHER APP</h2>
+        <!-- Two Switch tabs -->
+        <div class="flex space-x-40 text-xl py-7">
+            <div class="ylocation cursor-pointer">Your Weather</div>
+            <div class="clocation cursor-pointer">Search Weather</div>
+        </div>
+
+        <!-- GIF -->
+        <img src="https://www.superiorlawncareusa.com/wp-content/uploads/2020/05/loading-gif-png-5.gif" alt=""
+            class="gif disable w-40">
+
+        <!-- Data Container 1 (User Location) -->
+        <!-- mian div -->
+        <div class=" cont1 flex flex-col justify-center items-center space-y-4">
+            <!-- name of city and flag -->
+            <div class="flex space-x-1 justify-center items-center">
+                <div class="city text-xl">nameOfCity</div>
+                <img src="" alt="flag" class="flag w-5 h-5 ">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+                <!-- Clouds -->
+                <h3 class="clouds text-xl">Clouds</h3>
+                <img src="" alt="" class="weather_icon">
+                <!-- Temprature -->
+                <div class="temp text-4xl font-semibold">0°C</div>
+            </div>
+
+            <!-- Extra data divs -->
+            <div class="flex space-x-10">
+                <div class=" extraa flex flex-col w-36 h-32 justify-center items-center">
+                    <img src="wind.png" alt="img" class="w-8 h-8">
+                    <p>WINDSPEED</p>
+                    <p class="speed">0m/s</p>
+                </div>
+                <div class=" extraa flex flex-col w-36 h-32 justify-center items-center">
+                    <img src="dew.png" alt="img" class="w-8 h-8">
+                    <p>HUMIDITY</p>
+                    <p class="humidity">0%</p>
+                </div>
+                <div class=" extraa flex flex-col w-36 h-32 justify-center items-center">
+                    <img src="cloud.png" alt="img" class="w-8 h-8 ">
+                    <p>CLOUDS</p>
+                    <p class="cloud_perc">0%</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Data Container 2 (City Location) -->
+        <div class="disable cont2 flex flex-col justify-center items-center space-y-4">
+            <!-- Search Bar -->
+            <div class="flex items-center space-x-1">
+                <input type="text" placeholder="Search for city..."
+                    class="extraa text-white rounded-lg px-2 py-1 my-2 w-80 input">
+                <img src="search.png" alt="" class="w-8 h-8 cursor-pointer search">
+            </div>
+            <!-- name of city and flag -->
+            <div class="flex space-x-1 justify-center items-center">
+                <div class="city text-xl ">nameOfCity</div>
+                <img src="" alt="flag" class="flag w-5 h-5 ">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+                <!-- Clouds -->
+                <h3 class="clouds">Clouds</h3>
+                <img src="" alt="" class="weather_icon">
+                <!-- Temprature -->
+                <div class="temp text-4xl font-semibold">0°C</div>
+            </div>
+
+
+            <!-- Extra data divs -->
+            <div class="flex space-x-10">
+                <div class=" extraa flex flex-col w-36 h-32 justify-center items-center">
+                    <img src="wind.png" alt="img" class="w-8 h-8">
+                    <p>WINDSPEED</p>
+                    <p class="speed">0m/s</p>
+                </div>
+                <div class=" extraa flex flex-col w-36 h-32 justify-center items-center">
+                    <img src="dew.png" alt="img" class="w-8 h-8">
+                    <p>HUMIDITY</p>
+                    <p class="humidity">0%</p>
+                </div>
+                <div class=" extraa flex flex-col w-36 h-32 justify-center items-center">
+                    <img src="cloud.png" alt="img" class="w-8 h-8">
+                    <p>CLOUDS</p>
+                    <p class="cloud_perc">0%</p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
